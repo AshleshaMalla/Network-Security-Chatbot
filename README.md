@@ -53,14 +53,12 @@ The project involves implementing a quiz bot with question-answering capabilitie
 ![](docs/arch2.png)  |  ![](docs/arch1.png)
 
 ## Step by Step Instructions for Execution:
-
-1. Set up the virtual environment with Python v3.9, PIP, and VS Code.
-2. Install the required in-built Python packages using PIP.
-3. Install the Langchain framework and the necessary external libraries.
-4. Load the GPT-4 All model and the Hugging Face Model for InstructEmbeddings.
-5. Create and populate the Vector Database using the Faiss library.
-6. Implement user input processing, language understanding, document retrieval, and response generation.
-7. Execute the bot, allowing users to input questions and receive personalized security-related responses.
+- Unzip the code's zipped file.
+- install virtual environment if not available. (pip install virtualenv)
+- create an virtual environment inside the folder. (py -m virtualenv venv)
+- enter virtual env (venv/Scripts/activate)
+- install required libraries from requirements.txt (pip install -r requirements.txt)
+- run main.py file (py main.py)
 
 ## Features:
 
