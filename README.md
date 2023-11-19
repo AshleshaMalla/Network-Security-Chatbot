@@ -64,7 +64,7 @@ The project involves implementing a quiz bot with question-answering capabilitie
 
 ## Features:
 
-- **Question Types:** Supports multiple-choice, true/false, and open-ended questions.
+- **Question Types:** Supports multiple-choice, true/false, and open-ended questions. Accepts text-based questions and provides text-based responses
 - **Context-aware Responses:** Integrates language model outputs with document embeddings for context-aware answers.
 - **Efficient Document Retrieval:** Faiss-based Vector Database ensures quick and relevant document retrieval.
 
