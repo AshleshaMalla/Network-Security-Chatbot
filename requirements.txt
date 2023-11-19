@@ -4,3 +4,4 @@ langchain==0.0.338
 sentence_transformers 
 gpt4all
 pypdf
+
