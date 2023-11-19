@@ -30,7 +30,7 @@ def process_llm_response(llm_response):
     for source in llm_response["source_documents"]:
         print(source.metadata["source"])
         if "page" in source.metadata:
-            print("Page: ", source.metadata["page"])
+            print("Page: ", source.metadata["page"]+1)
 
 
 Embedding_store_path = "./Embedding_store"
