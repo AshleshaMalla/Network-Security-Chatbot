@@ -1,0 +1,6 @@
+faiss_cpu==1.7.4
+InstructorEmbedding==1.0.1
+langchain==0.0.338
+sentence_transformers 
+gpt4all
+pypdf
