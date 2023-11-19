@@ -1,6 +1,3 @@
-# pip -q install langchain openai tiktoken chromadb pypdf sentence_transformers InstructorEmbedding faiss-cpu gpt4all
-# venv\Scripts\activate
-
 from langchain.chains import RetrievalQA
 from langchain.llms import GPT4All
 
@@ -42,16 +39,10 @@ db_instructEmbedd = load_embeddings(
 )
 retriever = db_instructEmbedd.as_retriever(search_kwargs={"k": 5})
 
-# create the chain to answer questions
-# qa_chain_instrucEmbed = RetrievalQA.from_chain_type(llm=OpenAI(temperature=0.2, ),
-#                                   chain_type="stuff",
-#                                   retriever=retriever,
-#                                   return_source_documents=True)
-# callbacks = [StreamingStdOutCallbackHandler()]
-local_path = "./models/nous-hermes-llama2-13b.Q4_0.gguf"
+local_path = "./models/orca-mini-3b-gguf2-q4_0.gguf"
 
 qa_chain = RetrievalQA.from_chain_type(
-    llm=GPT4All(model=local_path, backend="gptj"),
+    llm=GPT4All(model=local_path, backend="gptj", device="gpu"),
     chain_type="stuff",
     retriever=retriever,
     return_source_documents=True,
@@ -59,9 +50,13 @@ qa_chain = RetrievalQA.from_chain_type(
 
 ## Answer with source
 
-print("-------------------Q/A------------------\n")
-query = input("Please enter your question: ")
-print("Question: ", query)
-llm_response = qa_chain(query)
-# print("All response: ", llm_response)
-process_llm_response(llm_response)
+while True:
+    print("-------------------Q/A------------------\n")
+    query = input("Please enter your question (or 'exit' to quit): ")
+    if query.lower() == 'exit':
+        break
+    print("Question: ", query)
+    llm_response = qa_chain(query)
+    # print("All response: ", llm_response)
+    process_llm_response(llm_response)
+

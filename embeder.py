@@ -1,5 +1,3 @@
-# pip -q install langchain openai tiktoken chromadb pypdf sentence_transformers InstructorEmbedding faiss-cpu gpt4all
-
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.document_loaders import PyPDFLoader
 from langchain.document_loaders import DirectoryLoader
@@ -15,7 +13,6 @@ def store_embeddings(docs, embeddings, sotre_name, path):
 
     with open(f"{path}/faiss_{sotre_name}.pkl", "wb") as f:
         pickle.dump(vectorStore, f)
-
 
 def load_embeddings(sotre_name, path):
     with open(f"{path}/faiss_{sotre_name}.pkl", "rb") as f:
@@ -40,8 +37,6 @@ store_embeddings(texts,
 
 db_instructEmbedd = load_embeddings(sotre_name='instructEmbeddings',
                                     path=Embedding_store_path)
-
-# db_instructEmbedd = FAISS.from_documents(texts, instructor_embeddings)
 
 retriever = db_instructEmbedd.as_retriever(search_kwargs={"k": 3})
 docs = retriever.get_relevant_documents("test")
