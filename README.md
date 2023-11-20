@@ -3,6 +3,8 @@
 ## Project Description:
 The project involves implementing a chat bot with question-answering capabilities using a Large Language Model (LLM). The bot is designed to engage with network security documents, specifically from presentation slides, questionaires, quizzes and assignments related to our network security course, serving as a knowledge base. Operating locally, the bot addresses security concerns related to data transmission over the internet. It can handle multiple-choice questions, true/false questions, and open-ended questions by leveraging the GPT-4 All model for natural language understanding and generation. Document embeddings are generated using Hugging Face InstructEmbeddings, and Faiss is employed to create a Vector Database for efficient document retrieval.
 
+## Demo Video: https://youtu.be/mA2-UnznoTY
+
 ## Prerequisites (Virtual Environment Setup):
 - Python v3.9
 - PIP (Python package installer)
