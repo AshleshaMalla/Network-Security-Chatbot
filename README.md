@@ -5,6 +5,13 @@ The project involves implementing a chat bot with question-answering capabilitie
 
 ## Demo Video: https://youtu.be/mA2-UnznoTY
 
+## Group Members (Group 6)
+Ashlesha Malla (R11904228)
+Daniel Benedict (R11901226)
+Naga Anusha Chadarasupalli (R11875661)
+Nisseem Rana Magar (R11904839)
+Pawan Paudel (R11906093)
+
 ## Prerequisites (Virtual Environment Setup):
 - Python v3.9
 - PIP (Python package installer)
